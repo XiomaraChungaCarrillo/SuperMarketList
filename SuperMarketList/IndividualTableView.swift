@@ -12,6 +12,7 @@ var productList = [Product]()
 
 class IndividualTableView: UITableViewController{
     
+    @IBOutlet var tableViewSupermarket: UITableView!
     var firstLoad = true
     
     func nonDeletedProducts() -> [Product]{
@@ -26,6 +27,7 @@ class IndividualTableView: UITableViewController{
     }
     
     override func viewDidLoad() {
+        tablewViewConfig()
         if(firstLoad) {
             firstLoad = false
             let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -42,17 +44,22 @@ class IndividualTableView: UITableViewController{
             }
         }
     }
+    
+    func tablewViewConfig() {
+        tableViewSupermarket.register(UINib(nibName: CellList.viewIdCell, bundle: .main), forCellReuseIdentifier: CellList.viewIdCell)
+        }
        
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let individualCell = tableView.dequeueReusableCell(withIdentifier: "productCellID", for: indexPath) as! IndividualCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: CellList.viewIdCell, for: indexPath)
         
         let thisProduct: Product!
         thisProduct = nonDeletedProducts()[indexPath.row]
         
-        individualCell.titleTF.text = thisProduct.title
-        individualCell.descLabel.text = thisProduct.desc
+        if let cell = cell as? CellList {
+            cell.prepareCell(with: nonDeletedProducts()[indexPath.row])
+        }
         
-        return individualCell
+        return cell
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

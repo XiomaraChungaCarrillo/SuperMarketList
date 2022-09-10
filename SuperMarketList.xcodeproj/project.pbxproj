@@ -20,7 +20,6 @@
 		EE82448C28CBE166005507E9 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE82448B28CBE166005507E9 /* CustomView.swift */; };
 		EE82448F28CBEFC1005507E9 /* CellList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE82448E28CBEFC1005507E9 /* CellList.swift */; };
 		EE82449128CBEFCB005507E9 /* CellList.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE82449028CBEFCB005507E9 /* CellList.xib */; };
-		EE82449828CBF526005507E9 /* IndividualCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE82449728CBF526005507E9 /* IndividualCell.swift */; };
 		EE82449A28CBF55A005507E9 /* IndividualTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE82449928CBF55A005507E9 /* IndividualTableView.swift */; };
 		EE82449C28CBFBD3005507E9 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE82449B28CBFBD3005507E9 /* Product.swift */; };
 /* End PBXBuildFile section */
@@ -41,7 +40,6 @@
 		EE82448B28CBE166005507E9 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		EE82448E28CBEFC1005507E9 /* CellList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellList.swift; sourceTree = "<group>"; };
 		EE82449028CBEFCB005507E9 /* CellList.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CellList.xib; sourceTree = "<group>"; };
-		EE82449728CBF526005507E9 /* IndividualCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndividualCell.swift; sourceTree = "<group>"; };
 		EE82449928CBF55A005507E9 /* IndividualTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndividualTableView.swift; sourceTree = "<group>"; };
 		EE82449B28CBFBD3005507E9 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -80,7 +78,6 @@
 				EE82446A28CBDE09005507E9 /* AppDelegate.swift */,
 				EE82446C28CBDE09005507E9 /* SceneDelegate.swift */,
 				EE82446E28CBDE09005507E9 /* ViewController.swift */,
-				EE82449728CBF526005507E9 /* IndividualCell.swift */,
 				EE82449928CBF55A005507E9 /* IndividualTableView.swift */,
 				EE82447028CBDE09005507E9 /* Main.storyboard */,
 				EE82449B28CBFBD3005507E9 /* Product.swift */,
@@ -194,7 +191,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EE82449828CBF526005507E9 /* IndividualCell.swift in Sources */,
 				EE82446F28CBDE09005507E9 /* ViewController.swift in Sources */,
 				EE82446B28CBDE09005507E9 /* AppDelegate.swift in Sources */,
 				EE82448A28CBE143005507E9 /* CardViewButton.swift in Sources */,

@@ -10,8 +10,8 @@ import UIKit
 class CellList: UITableViewCell {
     
     // MARK: - Items User
-    @IBOutlet private weak var titleList: UILabel!
-    @IBOutlet private weak var descriptionList: UILabel!
+    @IBOutlet weak var titleList: UILabel!
+    @IBOutlet weak var descriptionList: UILabel!
     
     // MARK: - Item Button
     @IBOutlet weak var cardView: CardViewButton!
@@ -31,8 +31,19 @@ class CellList: UITableViewCell {
     }
     
     override func prepareForReuse() {
-        super.prepareForReuse()
-    }
+            super.prepareForReuse()
+            reuse()
+        }
+        
+        func prepareCell(with tienda: Product) {
+            titleList.text = tienda.title ?? String()
+            descriptionList.text = tienda.desc ?? String()
+        }
+
+        func reuse() {
+            titleList.text = nil
+            descriptionList.text = nil
+        }
 }
 
 

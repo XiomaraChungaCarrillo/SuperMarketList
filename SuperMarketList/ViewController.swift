@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     var selectedProduct: Product? = nil
     
     override func viewDidLoad() {
+        descTV.layer.cornerRadius = 25
         super.viewDidLoad()
         if(selectedProduct != nil){
             titleTF.text = selectedProduct?.title
@@ -27,19 +28,24 @@ class ViewController: UIViewController {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context: NSManagedObjectContext = appDelegate.persistentContainer.viewContext
         if(selectedProduct == nil){
-            let entity = NSEntityDescription.entity(forEntityName: "Product", in: context)
-            let newProduct = Product(entity: entity!, insertInto: context)
-            newProduct.id = productList.count as NSNumber
-            newProduct.title = titleTF.text
-            newProduct.desc = descTV.text
             
-            do{
-                try context.save()
-                productList.append(newProduct)
-                navigationController?.popViewController(animated: true)
-            } catch {
-                print("content save error")
+            if titleTF.text != "", descTV.text != "" {
+                let entity = NSEntityDescription.entity(forEntityName: "Product", in: context)
+                let newProduct = Product(entity: entity!, insertInto: context)
+                newProduct.id = productList.count as NSNumber
+                newProduct.title = titleTF.text
+                newProduct.desc = descTV.text
+                
+                do{
+                    try context.save()
+                    productList.append(newProduct)
+                    navigationController?.popViewController(animated: true)
+                } catch {
+                    print("content save error")
+                }
             }
+            
+            
         } else {
             let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Product")
             do{
@@ -57,7 +63,6 @@ class ViewController: UIViewController {
                 print("Fetch Failed")
             }
         }
-        
     }
     
     @IBAction func deleteProduct(_ sender: Any) {
