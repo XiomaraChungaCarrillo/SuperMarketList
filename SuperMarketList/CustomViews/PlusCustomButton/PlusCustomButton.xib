@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PlusCustomButton" customModule="SuperMarketList" customModuleProvider="target">
+            <connections>
+                <outlet property="cardView" destination="1yU-qX-9ne" id="HL3-Vs-dtT"/>
+                <outlet property="plusImage" destination="iVR-85-YY8" id="ryb-oR-Zdb"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view userInteractionEnabled="NO" contentMode="scaleToFill" id="rJj-zl-uJH">
+            <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1yU-qX-9ne" customClass="CardView" customModule="SuperMarketList" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="CWk-6G-hcI"/>
+                        <constraint firstAttribute="height" constant="40" id="R2w-WL-Tk5"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                            <real key="value" value="0.40000000000000002"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                            <color key="value" red="0.15686274510000001" green="0.20000000000000001" blue="0.25882352939999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                            <real key="value" value="7"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="shadowOffsetHeight">
+                            <integer key="value" value="4"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="TgF-2t-lox">
+                    <rect key="frame" x="5" y="5" width="30" height="30"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="plus" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="iVR-85-YY8">
+                            <rect key="frame" x="0.0" y="2" width="30" height="26"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </imageView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="iVR-85-YY8" secondAttribute="bottom" id="7kX-LO-jQE"/>
+                        <constraint firstItem="iVR-85-YY8" firstAttribute="top" secondItem="TgF-2t-lox" secondAttribute="top" id="OY7-zL-Ebs"/>
+                        <constraint firstAttribute="trailing" secondItem="iVR-85-YY8" secondAttribute="trailing" id="R5C-J1-Xvj"/>
+                        <constraint firstItem="iVR-85-YY8" firstAttribute="leading" secondItem="TgF-2t-lox" secondAttribute="leading" id="UB7-3z-00d"/>
+                        <constraint firstAttribute="height" constant="30" id="l7E-8U-f3x"/>
+                        <constraint firstAttribute="width" constant="30" id="qzd-ri-0Ld"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="32r-yL-QjB"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="1yU-qX-9ne" firstAttribute="centerX" secondItem="rJj-zl-uJH" secondAttribute="centerX" id="2Ur-ng-faD"/>
+                <constraint firstItem="TgF-2t-lox" firstAttribute="centerX" secondItem="rJj-zl-uJH" secondAttribute="centerX" id="A2J-ho-1wJ"/>
+                <constraint firstItem="1yU-qX-9ne" firstAttribute="centerY" secondItem="rJj-zl-uJH" secondAttribute="centerY" id="QFb-Na-iE5"/>
+                <constraint firstItem="TgF-2t-lox" firstAttribute="centerY" secondItem="rJj-zl-uJH" secondAttribute="centerY" id="gTy-93-BxL"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="131.8840579710145" y="140.625"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="plus" catalog="system" width="128" height="113"/>
+    </resources>
+</document>
